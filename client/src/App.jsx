@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -7,6 +7,8 @@ import SignUp from './pages/SignUp'
 import Projects from './pages/Projects'
 import Dashboard from './pages/Dashboard'
 import Header from './Components/Header'
+import Footer from './Components/Footer'
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
 
       </Routes>
+        <Footer />
     </BrowserRouter>
   )
 }
