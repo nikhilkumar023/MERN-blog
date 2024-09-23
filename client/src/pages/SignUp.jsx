@@ -8,7 +8,7 @@ function SignUp() {
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
-  const navigate =useNavigate();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
@@ -34,12 +34,12 @@ function SignUp() {
       } else {
         toast.success("Account Created");
       }
-      setLoading(false);
-      if(res.ok) {
-        navigate('/sign-in');
+      if (res.ok) {
+        navigate("/sign-in");
       }
     } catch (error) {
       setErrorMessage(error.message);
+    } finally {
       setLoading(false);
     }
   };
@@ -71,14 +71,14 @@ function SignUp() {
               <TextInput type="password" placeholder="Password" id="password" onChange={handleChange} />
             </div>
             <Button gradientDuoTone="purpleToPink" type="submit" disabled={loading}>
-              {
-                loading ? (
-                  <>
-                  <Spinner size='sm'/>
-                  <span className='pl-3'>Loading...</span>
-                  </>
-                ) : 'Sign Up'
-              }
+              {loading ? (
+                <>
+                  <Spinner size="sm" />
+                  <span className="pl-3">Loading...</span>
+                </>
+              ) : (
+                "Sign Up"
+              )}
             </Button>
           </form>
           <div className="flex gap-2 text-sm mt-5">

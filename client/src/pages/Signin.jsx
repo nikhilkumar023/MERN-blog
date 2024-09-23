@@ -30,10 +30,10 @@ function SignIn() {
       });
       const data = await res.json();
       if (data.success === false) {
-        toast.error("Account Creation failed");
+        toast.error("SignIn Failed");
         dispatch(signInFailure(data.message));
       } else {
-        toast.success("Account Created");
+        toast.success("SignIn Successful");
       }
       
       if (res.ok) {
