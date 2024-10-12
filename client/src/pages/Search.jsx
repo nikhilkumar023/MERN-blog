@@ -3,7 +3,7 @@
 import { Button, Select, TextInput } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import PostCard from "../components/PostCard";
+import PostCard from "../Components/PostCard";
 
 function Search() {
   const [sidebarData, setSidebarData] = useState({

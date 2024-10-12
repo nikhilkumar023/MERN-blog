@@ -1,6 +1,6 @@
 //import React from 'react'
 
-import CallToAction from "../components/CallToAction"
+import CallToAction from "../Components/CallToAction"
 
 function Projects() {
   return (
