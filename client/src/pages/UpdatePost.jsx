@@ -129,7 +129,7 @@ function UpdatePost() {
           <Button type="button" gradientDuoTone="purpleToBlue" size="sm" outline onClick={handleUploadImage} disabled={imageUploadProgress}>
             {imageUploadProgress ? (
               <div className="w-16 h-16">
-                <CircularProgressbar value={imageUploadProgress} text={`${imageUploadProgress || 0}%`} />
+                <CircularProgressbar value={imageUploadProgress} text={`${imageUploadProgress || 0}`} />
               </div>
             ) : (
               "Upload Image"
